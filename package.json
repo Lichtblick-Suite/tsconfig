@@ -1,26 +1,28 @@
 {
-  "name": "@foxglove/tsconfig",
+  "name": "@lichtblick/tsconfig",
   "private": false,
   "version": "2.0.0",
-  "description": "Base TypeScript configuration for Foxglove projects",
+  "description": "Base TypeScript configuration for Lichtblick projects",
   "license": "MIT",
-  "repository": "github:foxglove/tsconfig",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lichtblick-Suite/tsconfig.git"
+  },
   "author": {
-    "name": "Foxglove",
-    "email": "contact@foxglove.dev",
-    "url": "https://foxglove.dev/"
+    "name": "Lichtblick",
+    "email": "lichtblick@bmwgroup.com"
   },
   "files": [
     "*.json"
   ],
   "scripts": {
-    "lint": "tsc --project base.json --outDir dist && eslint ."
+    "lint": "tsc --project tsconfig.custom.json && eslint ."
   },
   "devDependencies": {
-    "@foxglove/eslint-plugin": "0.21.2",
+    "@lichtblick/eslint-plugin": "1.0.1",
     "@types/jest": "29.5.1",
-    "@typescript-eslint/eslint-plugin": "5.59.1",
-    "@typescript-eslint/parser": "5.59.1",
+    "@typescript-eslint/eslint-plugin": "^6",
+    "@typescript-eslint/parser": "^6",
     "esbuild-jest": "0.5.0",
     "eslint": "8.39.0",
     "eslint-config-prettier": "8.8.0",
